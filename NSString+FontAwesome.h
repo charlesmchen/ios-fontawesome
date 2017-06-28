@@ -652,6 +652,8 @@ typedef NS_ENUM(NSInteger, FAIcon) {
 
 @interface NSString (FontAwesome)
 
++ (NSString *)fontAwesomeRandomIconIdentifier;
+
 /**
  @abstract Returns the correct enum for a font-awesome icon.
  @discussion The list of identifiers can be found here: http://fortawesome.github.io/Font-Awesome/icons

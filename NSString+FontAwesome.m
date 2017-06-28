@@ -27,6 +27,12 @@
 @implementation NSString (FontAwesome)
 
 #pragma mark - Public API
+
++ (NSString *)fontAwesomeRandomIconIdentifier {
+    NSDictionary *enums = [self enumDictionary];
+    return enums.allKeys[arc4random_uniform((uint32_t) enums.allKeys.count)];
+}
+
 + (FAIcon)fontAwesomeEnumForIconIdentifier:(NSString*)string {
     NSDictionary *enums = [self enumDictionary];
     return [enums[string] integerValue];
